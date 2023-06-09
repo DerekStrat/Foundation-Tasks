@@ -1,4 +1,6 @@
 <?php
+    header("Access-Control-Allow-Origin: *");
+
     /*
     1) Your php script should accept a POST variable that will serve as the maximum number for the Fibonacci sequence.
     2) Create a new html file that will have an input box where the user can specify the maximum number for the Fibonacci sequence.
@@ -38,7 +40,7 @@
     }
 
     if (isset($_POST["Num"])) {
-        $MaxNumInt = $_POST["num"];
+        $MaxNumInt = $_POST["Num"];
         echo json_encode(loopFibonacci($MaxNumInt));
     } else {
         echo json_encode("Nothing here");
